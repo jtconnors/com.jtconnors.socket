@@ -70,4 +70,22 @@
     nbproject/build-impl.xml file. 
 
     -->
+     <target name="-post-jar" depends="-do-modular-jar">
+    </target>
+    
+    <target name="-do-modular-jar">
+        <echo message="Updating ${dist.jar} to be a modular jar."/>
+        <echo message="Executing: ${modular.jar.command} ${modular.jar.args.concatenated}"/>
+        <exec executable="${modular.jar.command}">
+            <arg value="${modular.jar.arg1}"/>
+            <arg value="${modular.jar.arg2}"/>
+            <arg value="${modular.jar.arg3}"/>
+            <arg value="${modular.jar.arg4}"/>
+            <arg value="${modular.jar.arg5}"/>
+            <arg value="${modular.jar.arg6}"/>
+            <arg value="${modular.jar.arg7}"/>
+            <arg value="${modular.jar.arg8}"/>
+            <arg value="${modular.jar.arg9}"/>
+        </exec>
+    </target>
 </project>
